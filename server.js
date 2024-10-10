@@ -39,7 +39,6 @@ app.post("/create-user", async (req, res) => {
     const { data, error } = await supabase.auth.admin.createUser({
       email: email,
       password: password,
-      email_confirm: true,
       user_metadata: {
         full_name: full_name,
         role: role,
